@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+
+  "name": "GitHub Open in Editor",
+  "description": "This extension integrates GitHub with ${VISUAL:-$EDITOR}.",
+  "version": "1.0",
+
+  "permissions": [
+    "https://github.com/"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/*"],
+      "js": ["gh-open-editor.js"]
+    }
+  ]
+}
